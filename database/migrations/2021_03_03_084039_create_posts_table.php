@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('body');
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

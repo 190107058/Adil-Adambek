@@ -28,10 +28,10 @@ Route::get('/post/create', function (){
     ]);
 });
 
-// Route::get('/post', function (){
-//     $post = Post::find(1);
-//     return $post->title;
-// });
+Route::get('/post', function (){
+    $post = Post::find(1);
+    return $post->title;
+});
 
 Route::get('blog/index', [BlogController::class, 'index']);
 Route::get('blog/create', function( ){
@@ -39,3 +39,5 @@ Route::get('blog/create', function( ){
 });
 
 Route::post('blog/create', [BlogController::class, 'store'])->name('add-blog');
+
+Route::get('post/{id}', [BlogController::class, 'get_post']);
